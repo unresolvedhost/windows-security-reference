@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Security Events | Terminal</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Terminal Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <!-- <span class="terminal-prompt">user@security:~$</span> -->
+                <h1>windows-security-events</h1>
+            </div>
+            <div class="header-right">
+                <div class="status-indicator"></div>
+                <span>connected</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Terminal Window for Search -->
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <div class="control-btn close"></div>
+                    <div class="control-btn minimize"></div>
+                    <div class="control-btn maximize"></div>
+                </div>
+                <div class="terminal-title">Security Event Query Terminal</div>
+            </div>
+            
+            <div class="terminal-content">
+                <div class="search-header">
+                    <h2>Query Parameters</h2>
+                </div>
+                
+                <div class="search-content">
+                    <div class="search-row">
+                        <div class="search-group">
+                            <label for="eventId">Event ID</label>
+                            <input type="number" id="eventId" placeholder="4624">
+                        </div>
+                        
+                        <div class="search-group">
+                            <label for="category">Category</label>
+                            <select id="category">
+                                <option value="">All Categories</option>
+                            </select>
+                        </div>
+                        
+                        <div class="search-group">
+                            <label for="subcategory">Subcategory</label>
+                            <select id="subcategory">
+                                <option value="">All Subcategories</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="search-row">
+                        <div class="search-group full-width">
+                            <label for="messageSearch">Message Query</label>
+                            <input type="text" id="messageSearch" placeholder="search event descriptions...">
+                        </div>
+                    </div>
+
+                    <div class="search-row">
+                        <div class="search-group full-width">
+                            <label for="fieldNames">Field Filters</label>
+                            <div id="fieldNamesContainer" class="field-container">
+                                <!-- Field checkboxes populated by JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-row">
+                        <button id="clearFilters" class="btn-secondary">clear --all</button>
+                        <div class="results-count">
+                            <span id="resultsCount">0 events found</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Terminal Window -->
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <div class="control-btn close"></div>
+                    <div class="control-btn minimize"></div>
+                    <div class="control-btn maximize"></div>
+                </div>
+                <div class="terminal-title">Query Results</div>
+            </div>
+            
+            <div class="results-container">
+                <div id="resultsTable"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terminal Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                Windows Security Events Reference 
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/unresolvedhost/windows-security-reference" class="github-link">
+                    <span>⭐</span>
+                    <span>github</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

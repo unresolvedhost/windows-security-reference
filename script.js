@@ -941,6 +941,7 @@ class WindowsEventsLookup {
                                 "SubjectLogonId",
                                 "NewProcessId",
                                 "NewProcessName",
+                                "CommandLine",
                                 "TokenElevationType",
                                 "ProcessId"
                                 ],

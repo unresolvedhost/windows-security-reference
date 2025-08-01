@@ -4351,6 +4351,529 @@ class WindowsEventsLookup {
                                 "Message"
                                 ],
                                 "documentation_url": "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-6407"
+                            },
+                            {
+                                "event_id": 1,
+                                "category": "Sysmon",
+                                "subcategory": "Process Creation",
+                                "message_summary": "The process creation event provides extended information about a newly created process. The full command line provides context on the process execution. The ProcessGUID field is a unique value for this process across a domain to make event correlation easier. The hash is a full hash of the file with the algorithms in the HashType field.",
+                                "field_count": 23,
+                                "field_names": [
+                                "RuleName",
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "Image",
+                                "FileVersion",
+                                "Description",
+                                "Product",
+                                "Company",
+                                "OriginalFileName",
+                                "CommandLine",
+                                "CurrentDirectory",
+                                "User",
+                                "LogonGuid",
+                                "LogonId",
+                                "TerminalSessionId",
+                                "IntegrityLevel",
+                                "Hashes",
+                                "ParentProcessGuid",
+                                "ParentProcessId",
+                                "ParentImage",
+                                "ParentCommandLine",
+                                "ParentUser"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/1"
+                            },
+                            {
+                                "event_id": 2,
+                                "category": "Sysmon",
+                                "subcategory": "A process changed a file creation time",
+                                "message_summary": "The change file creation time event is registered when a file creation time is explicitly modified by a process. This event helps tracking the real creation time of a file. Attackers may change the file creation time of a backdoor to make it look like it was installed with the operating system. Note that many processes legitimately change the creation time of a file; it does not necessarily indicate malicious activity.",
+                                "field_count": 9,
+                                "field_names": [
+                                "RuleName",
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "Image",
+                                "TargetFilename",
+                                "CreationUtcTime",
+                                "PreviousCreationUtcTime",
+                                "User"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/2"
+                            },
+                            {
+                                "event_id": 3,
+                                "category": "Sysmon",
+                                "subcategory": "Network Connection",
+                                "message_summary": "The network connection event logs TCP/UDP connections on the machine. It is disabled by default. Each connection is linked to a process through the ProcessId and ProcessGuid fields. The event also contains the source and destination host names IP addresses, port numbers and IPv6 status.",
+                                "field_count": 18,
+                                "field_names": [
+                                "RuleName",
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "Image",
+                                "User",
+                                "Protocol",
+                                "Initiated",
+                                "SourceIsIpv6",
+                                "SourceIp",
+                                "SourceHostname",
+                                "SourcePort",
+                                "SourcePortName",
+                                "DestinationIsIpv6",
+                                "DestinationIp",
+                                "DestinationHostname",
+                                "DestinationPort",
+                                "DestinationPortName"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/3"
+                            },
+                            {
+                                "event_id": 4,
+                                "category": "Sysmon",
+                                "subcategory": "Sysmon service state change",
+                                "message_summary": "The service state change event reports the state of the Sysmon service (started or stopped).",
+                                "field_count": 4,
+                                "field_names": [
+                                "UtcTime",
+                                "State",
+                                "Version",
+                                "SchemaVersion"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/4"
+                            },
+                            {
+                                "event_id": 5,
+                                "category": "Sysmon",
+                                "subcategory": "Process Termination",
+                                "message_summary": "The process terminate event reports when a process terminates. It provides the UtcTime, ProcessGuid and ProcessId of the process.",
+                                "field_count": 4,
+                                "field_names": [
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "Image"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/5"
+                            },
+                            {
+                                "event_id": 6,
+                                "category": "Sysmon",
+                                "subcategory": "Driver Loaded",
+                                "message_summary": "The driver loaded events provides information about a driver being loaded on the system. The configured hashes are provided as well as signature information. The signature is created asynchronously for performance reasons and indicates if the file was removed after loading.",
+                                "field_count": 6,
+                                "field_names": [
+                                "UtcTime",
+                                "ImageLoaded",
+                                "Hashes",
+                                "Signed",
+                                "Signature",
+                                "SignatureStatus"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/6"
+                            },
+                            {
+                                "event_id": 7,
+                                "category": "Sysmon",
+                                "subcategory": "Image loaded",
+                                "message_summary": "The image loaded event logs when a module is loaded in a specific process.",
+                                "field_count": 9,
+                                "field_names": [
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "Image",
+                                "ImageLoaded",
+                                "Hashes",
+                                "Signed",
+                                "Signature",
+                                "SignatureStatus"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/7"
+                            },
+                            {
+                                "event_id": 8,
+                                "category": "Sysmon",
+                                "subcategory": "CreateRemoteThread",
+                                "message_summary": "The CreateRemoteThread event detects when a process creates a thread in another process. This technique is used by malware to inject code and hide in other processes. The event indicates the source and target process. It gives information on the code that will be run in the new thread: StartAddress, StartModule and StartFunction. Note that StartModule and StartFunction fields are inferred, they might be empty if the starting address is outside loaded modules or known exported functions.",
+                                "field_count": 11,
+                                "field_names": [
+                                "UtcTime",
+                                "SourceProcessGuid",
+                                "SourceProcessId",
+                                "SourceImage",
+                                "TargetProcessGuid",
+                                "TargetProcessId",
+                                "TargetImage",
+                                "NewThreadId",
+                                "StartAddress",
+                                "StartModule",
+                                "StartFunction"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/8"
+                            },
+                            {
+                                "event_id": 9,
+                                "category": "Sysmon",
+                                "subcategory": "RawAccessRead",
+                                "message_summary": "The RawAccessRead event detects when a process conducts reading operations from the drive using the \\\\.\\ denotation. This technique is often used by malware for data exfiltration of files that are locked for reading, as well as to avoid file access auditing tools. The event indicates the source process and target device.",
+                                "field_count": 5,
+                                "field_names": [
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "Image",
+                                "Device"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/9"
+                            },
+                            {
+                                "event_id": 10,
+                                "category": "Sysmon",
+                                "subcategory": "ProcessAccess",
+                                "message_summary": "The process accessed event reports when a process opens another process, an operation that’s often followed by information queries or reading and writing the address space of the target process. This enables detection of hacking tools that read the memory contents of processes like Local Security Authority (Lsass.exe) in order to steal credentials for use in Pass-the-Hash attacks. Enabling it can generate significant amounts of logging if there are diagnostic utilities active that repeatedly open processes to query their state, so it generally should only be done so with filters that remove expected accesses.",
+                                "field_count": 10,
+                                "field_names": [
+                                "UtcTime",
+                                "SourceProcessGUID",
+                                "SourceProcessId",
+                                "SourceThreadId",
+                                "SourceImage",
+                                "TargetProcessGUID",
+                                "TargetProcessId",
+                                "TargetImage",
+                                "GrantedAccess",
+                                "CallTrace"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/10"
+                            },
+                            {
+                                "event_id": 11,
+                                "category": "Sysmon",
+                                "subcategory": "FileCreate",
+                                "message_summary": "File create operations are logged when a file is created or overwritten. This event is useful for monitoring autostart locations, like the Startup folder, as well as temporary and download directories, which are common places malware drops during initial infection.",
+                                "field_count": 6,
+                                "field_names": [
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "Image",
+                                "TargetFilename",
+                                "CreationUtcTime"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/11"
+                            },
+                            {
+                                "event_id": 12,
+                                "category": "Sysmon",
+                                "subcategory": "RegistryEvent (Object create and delete)",
+                                "message_summary": "Registry key and value create and delete operations map to this event type, which can be useful for monitoring for changes to Registry autostart locations, or specific malware registry modifications.",
+                                "field_count": 6,
+                                "field_names": [
+                                "EventType",
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "Image",
+                                "TargetObject"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/12"
+                            },
+                            {
+                                "event_id": 13,
+                                "category": "Sysmon",
+                                "subcategory": "RegistryEvent (Value Set)",
+                                "message_summary": "This Registry event type identifies Registry value modifications. The event records the value written for Registry values of type DWORD and QWORD.",
+                                "field_count": 7,
+                                "field_names": [
+                                "EventType",
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "Image",
+                                "TargetObject",
+                                "Details"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/13"
+                            },
+                            {
+                                "event_id": 14,
+                                "category": "Sysmon",
+                                "subcategory": "RegistryEvent (Key and Value Rename)",
+                                "message_summary": "Registry key and value rename operations map to this event type, recording the new name of the key or value that was renamed.",
+                                "field_count": 7,
+                                "field_names": [
+                                "EventType",
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "Image",
+                                "TargetObject",
+                                "NewName"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/14"
+                            },
+                            {
+                                "event_id": 15,
+                                "category": "Sysmon",
+                                "subcategory": "FileCreateStreamHash",
+                                "message_summary": "This event logs when a named file stream is created, and it generates events that log the hash of the contents of the file to which the stream is assigned (the unnamed stream), as well as the contents of the named stream. There are malware variants that drop their executables or configuration settings via browser downloads, and this event is aimed at capturing that based on the browser attaching a Zone.Identifier \"mark of the web\" stream.",
+                                "field_count": 9,
+                                "field_names": [
+                                "RuleName",
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "Image",
+                                "TargetFilename",
+                                "CreationUtcTime",
+                                "Hash",
+                                "Contents"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/15"
+                            },
+                            {
+                                "event_id": 16,
+                                "category": "Sysmon",
+                                "subcategory": "ServiceConfigurationChange",
+                                "message_summary": "This event logs changes in the Sysmon configuration - for example when the filtering rules are updated.",
+                                "field_count": 3,
+                                "field_names": [
+                                "UtcTime",
+                                "Configuration",
+                                "ConfigurationFileHash"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/16"
+                            },
+                            {
+                                "event_id": 17,
+                                "category": "Sysmon",
+                                "subcategory": "PipeEvent (Pipe Created)",
+                                "message_summary": "This event generates when a named pipe is created. Malware often uses named pipes for interprocess communication.",
+                                "field_count": 5,
+                                "field_names": [
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "PipeName",
+                                "Image"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/17"
+                            },
+                            {
+                                "event_id": 18,
+                                "category": "Sysmon",
+                                "subcategory": "PipeEvent (Pipe Connected)",
+                                "message_summary": "This event logs when a named pipe connection is made between a client and a server.",
+                                "field_count": 5,
+                                "field_names": [
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "PipeName",
+                                "Image"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/18"
+                            },
+                            {
+                                "event_id": 19,
+                                "category": "Sysmon",
+                                "subcategory": "WmiEvent (WmiEventFilter activity detected)",
+                                "message_summary": "When a WMI event filter is registered, which is a method used by malware to execute, this event logs the WMI namespace, filter name and filter expression.",
+                                "field_count": 7,
+                                "field_names": [
+                                "EventType",
+                                "UtcTime",
+                                "Operation",
+                                "User",
+                                "EventNamespace",
+                                "Name",
+                                "Query"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/19"
+                            },
+                            {
+                                "event_id": 20,
+                                "category": "Sysmon",
+                                "subcategory": "WmiEvent (WmiEventConsumer activity detected)",
+                                "message_summary": "This event logs the registration of WMI consumers, recording the consumer name, log, and destination.",
+                                "field_count": 7,
+                                "field_names": [
+                                "EventType",
+                                "UtcTime",
+                                "Operation",
+                                "User",
+                                "Name",
+                                "Type",
+                                "Destination"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/20"
+                            },
+                            {
+                                "event_id": 21,
+                                "category": "Sysmon",
+                                "subcategory": "WmiEvent (WmiEventConsumerToFilter activity detected)",
+                                "message_summary": "When a consumer binds to a filter, this event logs the consumer name and filter path.",
+                                "field_count": 6,
+                                "field_names": [
+                                "EventType",
+                                "UtcTime",
+                                "Operation",
+                                "User",
+                                "Consumer",
+                                "Filter"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/21"
+                            },
+                            {
+                                "event_id": 22,
+                                "category": "Sysmon",
+                                "subcategory": "DNSEvent (DNS query)",
+                                "message_summary": "This event is generated when a process executes a DNS query, whether the result is successful or fails, cached or not. The telemetry for this event was added for Windows 8.1 so it is not available on Windows 7 and earlier.",
+                                "field_count": 8,
+                                "field_names": [
+                                "RuleName",
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "QueryName",
+                                "QueryStatus",
+                                "QueryResults",
+                                "Image"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/22"
+                            },
+                            {
+                                "event_id": 23,
+                                "category": "Sysmon",
+                                "subcategory": "FileDelete (File Delete archived)",
+                                "message_summary": "A file was deleted. Additionally to logging the event, the deleted file is also saved in the ArchiveDirectory (which is C:\\Sysmon by default). Under normal operating conditions this directory might grow to an unreasonable size - see event ID 26: FileDeleteDetected for similar behavior but without saving the deleted files.",
+                                "field_count": 8,
+                                "field_names": [
+                                "RuleName",
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "User",
+                                "Image",
+                                "TargetFilename",
+                                "Hashes"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/23"
+                            },
+                            {
+                                "event_id": 24,
+                                "category": "Sysmon",
+                                "subcategory": "ClipboardChange (New content in the clipboard)",
+                                "message_summary": "This event is generated when the system clipboard contents change.",
+                                "field_count": 9,
+                                "field_names": [
+                                "RuleName",
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "User",
+                                "Image",
+                                "Session",
+                                "ClientInfo",
+                                "Hashes"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/24"
+                            },
+                            {
+                                "event_id": 25,
+                                "category": "Sysmon",
+                                "subcategory": "ProcessTampering (Process image change)",
+                                "message_summary": "This event is generated when process hiding techniques such as \"hollow\" or \"herpaderp\" are being detected.",
+                                "field_count": 7,
+                                "field_names": [
+                                "RuleName",
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "Image",
+                                "Type",
+                                "User"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/25"
+                            },
+                            {
+                                "event_id": 26,
+                                "category": "Sysmon",
+                                "subcategory": "FileDeleteDetected (File Delete logged)",
+                                "message_summary": "A file was deleted.",
+                                "field_count": 9,
+                                "field_names": [
+                                "RuleName",
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "User",
+                                "Image",
+                                "TargetFilename",
+                                "Hashes",
+                                "IsExecutable"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/26"
+                            },
+                            {
+                                "event_id": 27,
+                                "category": "Sysmon",
+                                "subcategory": "FileBlockExecutable",
+                                "message_summary": "This event is generated when Sysmon detects and blocks the creation of executable files (PE format).",
+                                "field_count": 8,
+                                "field_names": [
+                                "RuleName",
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "User",
+                                "Image",
+                                "TargetFilename",
+                                "Hashes"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/27"
+                            },
+                            {
+                                "event_id": 28,
+                                "category": "Sysmon",
+                                "subcategory": "FileBlockShredding",
+                                "message_summary": "This event is generated when Sysmon detects and blocks file shredding from tools such as SDelete.",
+                                "field_count": 9,
+                                "field_names": [
+                                "RuleName",
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "User",
+                                "Image",
+                                "TargetFilename",
+                                "Hashes",
+                                "IsExecutable"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/28"
+                            },
+                            {
+                                "event_id": 29,
+                                "category": "Sysmon",
+                                "subcategory": "FileExecutableDetected",
+                                "message_summary": "This event is generated when Sysmon detects the creation of a new executable file (PE format).",
+                                "field_count": 8,
+                                "field_names": [
+                                "RuleName",
+                                "UtcTime",
+                                "ProcessGuid",
+                                "ProcessId",
+                                "User",
+                                "Image",
+                                "TargetFilename",
+                                "Hashes"
+                                ],
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/29"
                             }
                             ];
             
@@ -4567,43 +5090,84 @@ class WindowsEventsLookup {
         });
     }
 
-    createEventCard(event, index) {
-        const eventCard = document.createElement('div');
-        eventCard.className = 'event-card';
+    // createEventCard(event, index) {
+    //     const eventCard = document.createElement('div');
+    //     eventCard.className = 'event-card';
         
-        eventCard.innerHTML = `
-            <div class="event-header">
-                <div class="event-id">${event.event_id}</div>
-                <div class="event-categories">
-                    <span class="event-category">${event.category}</span>
-                    <span class="event-category">${event.subcategory}</span>
+    //     eventCard.innerHTML = `
+    //         <div class="event-header">
+    //             <div class="event-id">${event.event_id}</div>
+    //             <div class="event-categories">
+    //                 <span class="event-category">${event.category}</span>
+    //                 <span class="event-category">${event.subcategory}</span>
+    //             </div>
+    //         </div>
+            
+    //         <div class="event-message">${event.message_summary}</div>
+            
+    //         <div class="event-fields">
+    //             <div class="fields-header">Fields (${event.field_count}):</div>
+    //             <div class="field-list-container">
+    //                 <div class="field-list">
+    //                     ${event.field_names.map(field => `<span class="field-tag">${field}</span>`).join('')}
+    //                 </div>
+    //                 <div class="field-actions">
+    //                     <button class="copy-splunk-btn">copy Splunk Query</button>
+    //                     <button class="copy-elastic-btn">copy Elastic Query</button>
+    //                 </div>
+    //             </div>
+    //         </div>
+            
+    //         <div class="event-documentation">
+    //             <a href="${event.documentation_url}" target="_blank" class="doc-link">
+    //                 Microsoft Documentation
+    //             </a>
+    //             <a href="https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=${event.event_id}" target="_blank" class="doc-link ultimate-security-link">
+    //                 Ultimate Windows Security
+    //             </a>
+    //         </div>
+    //     `;
+
+    createEventCard(event, index) {
+    const ultimateEventId = event.category === "Sysmon" ? "900" + String(event.event_id).padStart(2, "0") : event.event_id;
+
+    const eventCard = document.createElement('div');
+    eventCard.className = 'event-card';
+
+    eventCard.innerHTML = `
+        <div class="event-header">
+            <div class="event-id">${event.event_id}</div>
+            <div class="event-categories">
+                <span class="event-category">${event.category}</span>
+                <span class="event-category">${event.subcategory}</span>
+            </div>
+        </div>
+
+        <div class="event-message">${event.message_summary}</div>
+
+        <div class="event-fields">
+            <div class="fields-header">Fields (${event.field_count}):</div>
+            <div class="field-list-container">
+                <div class="field-list">
+                    ${event.field_names.map(field => `<span class="field-tag">${field}</span>`).join('')}
+                </div>
+                <div class="field-actions">
+                    <button class="copy-splunk-btn">copy splunk</button>
+                    <button class="copy-elastic-btn">copy elastic</button>
                 </div>
             </div>
-            
-            <div class="event-message">${event.message_summary}</div>
-            
-            <div class="event-fields">
-                <div class="fields-header">Fields (${event.field_count}):</div>
-                <div class="field-list-container">
-                    <div class="field-list">
-                        ${event.field_names.map(field => `<span class="field-tag">${field}</span>`).join('')}
-                    </div>
-                    <div class="field-actions">
-                        <button class="copy-splunk-btn">copy Splunk Query</button>
-                        <button class="copy-elastic-btn">copy Elastic Query</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="event-documentation">
-                <a href="${event.documentation_url}" target="_blank" class="doc-link">
-                    Microsoft Documentation
-                </a>
-                <a href="https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=${event.event_id}" target="_blank" class="doc-link ultimate-security-link">
-                    Ultimate Windows Security
-                </a>
-            </div>
-        `;
+        </div>
+
+        <div class="event-documentation">
+            <a href="${event.documentation_url}" target="_blank" class="doc-link">
+                Microsoft Documentation
+            </a>
+            <a href="https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=${ultimateEventId}" target="_blank" class="doc-link ultimate-security-link">
+                Ultimate Windows Security
+            </a>
+        </div>
+    `;
+
         
         // Add direct event listeners to the buttons
         const splunkBtn = eventCard.querySelector('.copy-splunk-btn');

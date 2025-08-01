@@ -4383,7 +4383,7 @@ class WindowsEventsLookup {
                                 "ParentCommandLine",
                                 "ParentUser"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/1"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-1-process-creation"
                             },
                             {
                                 "event_id": 2,
@@ -4402,7 +4402,7 @@ class WindowsEventsLookup {
                                 "PreviousCreationUtcTime",
                                 "User"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/2"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-2-a-process-changed-a-file-creation-time"
                             },
                             {
                                 "event_id": 3,
@@ -4430,7 +4430,7 @@ class WindowsEventsLookup {
                                 "DestinationPort",
                                 "DestinationPortName"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/3"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-3-network-connection"
                             },
                             {
                                 "event_id": 4,
@@ -4444,7 +4444,7 @@ class WindowsEventsLookup {
                                 "Version",
                                 "SchemaVersion"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/4"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-4-sysmon-service-state-changed"
                             },
                             {
                                 "event_id": 5,
@@ -4458,7 +4458,7 @@ class WindowsEventsLookup {
                                 "ProcessId",
                                 "Image"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/5"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-5-process-terminated"
                             },
                             {
                                 "event_id": 6,
@@ -4474,7 +4474,7 @@ class WindowsEventsLookup {
                                 "Signature",
                                 "SignatureStatus"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/6"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-6-driver-loaded"
                             },
                             {
                                 "event_id": 7,
@@ -4493,7 +4493,7 @@ class WindowsEventsLookup {
                                 "Signature",
                                 "SignatureStatus"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/7"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-7-image-loaded"
                             },
                             {
                                 "event_id": 8,
@@ -4514,7 +4514,7 @@ class WindowsEventsLookup {
                                 "StartModule",
                                 "StartFunction"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/8"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-8-createremotethread"
                             },
                             {
                                 "event_id": 9,
@@ -4529,7 +4529,7 @@ class WindowsEventsLookup {
                                 "Image",
                                 "Device"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/9"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-9-rawaccessread"
                             },
                             {
                                 "event_id": 10,
@@ -4549,7 +4549,7 @@ class WindowsEventsLookup {
                                 "GrantedAccess",
                                 "CallTrace"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/10"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-10-processaccess"
                             },
                             {
                                 "event_id": 11,
@@ -4565,7 +4565,7 @@ class WindowsEventsLookup {
                                 "TargetFilename",
                                 "CreationUtcTime"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/11"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-11-filecreate"
                             },
                             {
                                 "event_id": 12,
@@ -4581,7 +4581,7 @@ class WindowsEventsLookup {
                                 "Image",
                                 "TargetObject"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/12"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-12-registryevent-object-create-and-delete"
                             },
                             {
                                 "event_id": 13,
@@ -4598,7 +4598,7 @@ class WindowsEventsLookup {
                                 "TargetObject",
                                 "Details"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/13"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-13-registryevent-value-set"
                             },
                             {
                                 "event_id": 14,
@@ -4615,7 +4615,7 @@ class WindowsEventsLookup {
                                 "TargetObject",
                                 "NewName"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/14"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-14-registryevent-key-and-value-rename"
                             },
                             {
                                 "event_id": 15,
@@ -4634,7 +4634,7 @@ class WindowsEventsLookup {
                                 "Hash",
                                 "Contents"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/15"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-15-filecreatestreamhash"
                             },
                             {
                                 "event_id": 16,
@@ -4647,7 +4647,7 @@ class WindowsEventsLookup {
                                 "Configuration",
                                 "ConfigurationFileHash"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/16"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-16-serviceconfigurationchange"
                             },
                             {
                                 "event_id": 17,
@@ -4662,7 +4662,7 @@ class WindowsEventsLookup {
                                 "PipeName",
                                 "Image"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/17"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-17-pipeevent-pipe-created"
                             },
                             {
                                 "event_id": 18,
@@ -4677,7 +4677,7 @@ class WindowsEventsLookup {
                                 "PipeName",
                                 "Image"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/18"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-18-pipeevent-pipe-connected"
                             },
                             {
                                 "event_id": 19,
@@ -4694,7 +4694,7 @@ class WindowsEventsLookup {
                                 "Name",
                                 "Query"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/19"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-19-wmievent-wmieventfilter-activity-detected"
                             },
                             {
                                 "event_id": 20,
@@ -4711,7 +4711,7 @@ class WindowsEventsLookup {
                                 "Type",
                                 "Destination"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/20"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-20-wmievent-wmieventconsumer-activity-detected"
                             },
                             {
                                 "event_id": 21,
@@ -4727,7 +4727,7 @@ class WindowsEventsLookup {
                                 "Consumer",
                                 "Filter"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/21"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-21-wmievent-wmieventconsumertofilter-activity-detected"
                             },
                             {
                                 "event_id": 22,
@@ -4745,7 +4745,7 @@ class WindowsEventsLookup {
                                 "QueryResults",
                                 "Image"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/22"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-22-dnsevent-dns-query"
                             },
                             {
                                 "event_id": 23,
@@ -4763,7 +4763,7 @@ class WindowsEventsLookup {
                                 "TargetFilename",
                                 "Hashes"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/23"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-23-filedelete-file-delete-archived"
                             },
                             {
                                 "event_id": 24,
@@ -4782,7 +4782,7 @@ class WindowsEventsLookup {
                                 "ClientInfo",
                                 "Hashes"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/24"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-24-clipboardchange-new-content-in-the-clipboard"
                             },
                             {
                                 "event_id": 25,
@@ -4799,7 +4799,7 @@ class WindowsEventsLookup {
                                 "Type",
                                 "User"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/25"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-25-processtampering-process-image-change"
                             },
                             {
                                 "event_id": 26,
@@ -4818,7 +4818,7 @@ class WindowsEventsLookup {
                                 "Hashes",
                                 "IsExecutable"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/26"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-26-filedeletedetected-file-delete-logged"
                             },
                             {
                                 "event_id": 27,
@@ -4836,7 +4836,7 @@ class WindowsEventsLookup {
                                 "TargetFilename",
                                 "Hashes"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/27"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-27-fileblockexecutable"
                             },
                             {
                                 "event_id": 28,
@@ -4855,7 +4855,7 @@ class WindowsEventsLookup {
                                 "Hashes",
                                 "IsExecutable"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/28"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-28-fileblockshredding"
                             },
                             {
                                 "event_id": 29,
@@ -4873,7 +4873,7 @@ class WindowsEventsLookup {
                                 "TargetFilename",
                                 "Hashes"
                                 ],
-                                "documentation_url": "https://learn.microsoft.com/en-us/sysmon/eventid/29"
+                                "documentation_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-29-fileexecutabledetected"
                             }
                             ];
             
